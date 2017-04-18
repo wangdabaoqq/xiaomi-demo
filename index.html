@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>主页</title>
+<meta name="description" content="个人小站维护加载，敬请期待！" />
+<meta name="keywords" content="个人小站维护加载，敬请期待！" >
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/APlayer.css">
+<link href="images/cat.ico" rel="shortcut icon">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+ <script type='text/javascript' src='js/jquery.particleground.js'></script>
+  <script type='text/javascript' src='js/demo.js'></script>
+<script src="js/APlayer.min.js"></script>
+<script src="js/require.js"></script>
+
+<script>
+	require(['js/particleground','js/particle','js/bootstrap.min','js/12.js'],function(){
+         new Particleground.particle('#demo');
+	});
+</script>
+<script src="js/fakeLoader.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("body").append('<div class="fakeloader"></div>');
+    $(".fakeloader").fakeLoader({
+        timeToHide:3500,
+        bgColor:"#fff",
+        imagePath:"images/3.gif"
+    }); 
+});
+</script>
+<style>
+	.bg{
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.bd{
+		overflow-x: hidden;	
+	}
+</style>
+</head>
+
+<body class="bd">
+	<div class="bg" id="particles"></div>
+	<nav class="navbar navbar-default" style="position:static;" >
+		<div class="container">
+			<div class="navbar-header">
+				<button data-target = "#bs-navbar-collapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+					<span class="sr-only">百度</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<b>
+					<a href="" class="navbar-brand">个人主页</a>
+				</b>
+			</div>
+			<div class="navbar-collapse collapse" aria-expanded="false" id="bs-navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="">DOCES</a>
+					</li>
+					<li>
+						<a href="">Team</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+		<div class="col-lg-3" style="padding-left: 0; paddi	ng-right: 0;">
+			<div id="player1" class="aplayer">
+				<pre class="aplayer-lrc-content">
+					
+					
+				</pre>
+			</div>
+		</div>	
+</body>
+</html>
